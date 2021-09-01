@@ -17,4 +17,4 @@ tibble::tibble(
   cat2 = sample(letters, 1e3, replace = TRUE),
   var2 = runif(1e3)
 ) |>
-readr::write_csv(file = "~/Desktop/matrix.csv")
+readr::write_csv(file = "matrix.csv")
