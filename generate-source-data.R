@@ -19,4 +19,4 @@ matrix <- tibble::tibble(
 )
 
 readr::write_csv(x = matrix, file = "matrix.csv")
-writexl::write_xlsx(x = matrix, path = "~/Desktop/one.xlsx")
+writexl::write_xlsx(x = matrix, path = "matrix.xlsx")
