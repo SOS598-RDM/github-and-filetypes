@@ -10,11 +10,13 @@
 #   mutate(var1 = round(var1, 1)) %>% 
 #   write_csv('~/Desktop/delimitedA.csv')
 
-tibble::tibble(
+matrix <- tibble::tibble(
   date = lubridate::now() + runif(1e3) * 86400,
   cat1 = sample(letters, 1e3, replace = TRUE),
   var1 = runif(1e3),
   cat2 = sample(letters, 1e3, replace = TRUE),
   var2 = runif(1e3)
-) |>
-readr::write_csv(file = "matrix.csv")
+)
+
+readr::write_csv(x = matrix, file = "matrix.csv")
+writexl::write_xlsx(x = matrix, path = "~/Desktop/one.xlsx")
