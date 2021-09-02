@@ -11,6 +11,7 @@
 #   write_csv('~/Desktop/delimitedA.csv')
 
 matrix <- tibble::tibble(
+  id   = seq(from = 1, to = 1e3, by = 1),
   date = lubridate::now() + runif(1e3) * 86400,
   cat1 = sample(letters, 1e3, replace = TRUE),
   var1 = runif(1e3),
